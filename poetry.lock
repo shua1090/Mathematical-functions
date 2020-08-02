@@ -1,0 +1,16 @@
+[[package]]
+category = "main"
+description = "Functional programming in Python"
+name = "functions"
+optional = false
+python-versions = "*"
+version = "0.7.0"
+
+[metadata]
+content-hash = "f712d76fe013e379544ce4740cc1c068a2c730ed52a139280106ba5027fe8e84"
+python-versions = "^3.8"
+
+[metadata.files]
+functions = [
+    {file = "functions-0.7.0.tar.gz", hash = "sha256:5a36bd11d36bbce210fecddd9ff1a475a86035905818a4075d6c7ebb2f714181"},
+]
