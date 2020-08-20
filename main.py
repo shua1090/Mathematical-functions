@@ -1,5 +1,6 @@
-from Functions import ranged as r
-from TextEditing import strtonumlst
+'''This file is only for testing'''
+
+
+from Functions import sin, cos, tan
 x = input('Put in some numbers, I\'ll meany it for you!\n')
-x =strtonumlst(x)
-print(x)
+print(tan(int(x)))
