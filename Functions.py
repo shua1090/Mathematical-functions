@@ -10,20 +10,29 @@ def sqrt(num):
 def nroot(num, n=2):
   return num**(1/n)
 
-def sin(num, deg=True):
+def sin(num, deg=True, prec=2):
+  pi = 3.1415926535897932384626433
   if deg == True:
-    x = 3.1415926535897932384626433
-    x = num*(x/180)
-    return round(x - float((x**3)/6)+float((x**5)/120)-float((x**7)/factorial(7))+((x**9)/factorial(9))-((x**11)/factorial(11))+((x**13)/factorial(13))-((x**15)/factorial(15))+((x**17)/factorial(17))-((x**19)/factorial(19))+((x**21)/factorial(21))-((x**23)/factorial(23))+((x**25)/factorial(25)), 7)
+    num = num%360
+    x = num*(pi/180)
+  else:
+    num %= 2
+    x = num*pi;
+  return round(x - float((x**3)/6)+float((x**5)/120)-float((x**7)/factorial(7))+((x**9)/factorial(9))-((x**11)/factorial(11))+((x**13)/factorial(13))-((x**15)/factorial(15))+((x**17)/factorial(17))-((x**19)/factorial(19))+((x**21)/factorial(21))-((x**23)/factorial(23))+((x**25)/factorial(25)), 2)
 
-def cos(num, deg=True):
-  if deg == True:
-    return sin(90-num)
+def cos(num, deg=True, prec=2):
+  pi = 3.1415926535897932384626433
+  if deg == True: return sin(90-num, prec=prec)
+  else: 
+    num = num*pi
+    return sin(90+float(num*(180/pi)), True, prec)
 
-def tan(num, deg=True):
+def tan(num, deg=True, prec=2):
+  
   if num % 90 == 0 and num % 180 != 0:
-    return "1/0 (undefined)"
-  if deg == True: return sin(num)/cos(num)
+    raise ZeroDivisionError("That's not quite allowed")
+  if deg == True: return sin(num, prec)/cos(num, prec=prec)
+  else: return sin(num, prec=prec, deg=False)/cos(num, prec=prec, deg=False)
 
 ##Dataset Calculations##
 def SD(dataset):
