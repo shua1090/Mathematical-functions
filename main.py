@@ -1,7 +1,6 @@
 '''This file is only for testing'''
 
+from Graph import graph
 
-import Trig
-trig = Trig.Trig()
-while True:
-  print(eval(input('>')))
+graffy = graph("x**2")
+graffy.display()

@@ -37,4 +37,30 @@ def strtonumlst(arg1, prec=True):
   good luck to future programming!
   
   
-  I will work on shortening some of these functions and adding more soon.
+Graphing section has been added, it has been implemented through Matplotlib. To set it up, follow:
+```python
+from Graph import graph
+
+line = graph("x**2") #Everything is in terms of x, so this is actually: y=x**2
+line.display() #Displays the actual graph
+```
+
+Trigonometric functions section has been added. The Sine function has been implemented through a Taylor's series to the 23rd degree. The remaining functions were built off of the
+Sine function. Here are the uses:
+```python
+from Trig import *
+
+print(sin(90)) #prints 1.0
+
+print(cos(90)) #prints 0.0
+
+print(tan(45)) #prints 1.0
+
+print(piradians(1)) #prints 3.1415... (1 pi radians)
+
+print(radiansRev(3.1415)) #prints ~1
+
+print(degToRad(180)) #prints pi (180 degrees is pi radians)
+#etc...
+#Note, the Taylor's series is calculated with each run, so it may be a bit slow for now
+```
