@@ -64,3 +64,5 @@ print(degToRad(180)) #prints pi (180 degrees is pi radians)
 #etc...
 #Note, the Taylor's series is calculated with each run, so it may be a bit slow for now
 ```
+
+[![Run on Repl.it](https://repl.it/badge/github/shua1090/Mathematical-functions)](https://repl.it/github/shua1090/Mathematical-functions)
